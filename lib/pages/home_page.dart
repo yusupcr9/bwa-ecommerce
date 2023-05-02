@@ -1,3 +1,6 @@
+import 'package:bwa_ecommerce/pages/cart_page.dart';
+import 'package:bwa_ecommerce/pages/product_page.dart';
+import 'package:bwa_ecommerce/pages/search_page.dart';
 import 'package:bwa_ecommerce/widgets/categories_tile.dart';
 import 'package:bwa_ecommerce/widgets/product_list.dart';
 import 'package:flutter/material.dart';
@@ -35,9 +38,22 @@ class HomePage extends StatelessWidget {
                             hintStyle: GoogleFonts.montserrat(
                               color: Color(0xff68687A),
                             ),
-                            prefixIcon: Icon(
-                              Icons.search,
-                              color: Color(0xff68687A),
+                            prefixIcon: InkWell(
+                              onTap: () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  PageRouteBuilder(
+                                    pageBuilder:
+                                        (context, animation1, animation2) =>
+                                            SearchPage(),
+                                    transitionDuration: Duration(seconds: 0),
+                                  ),
+                                );
+                              },
+                              child: Icon(
+                                Icons.search,
+                                color: Color(0xff68687A),
+                              ),
                             )),
                       ),
                     ),
@@ -45,21 +61,33 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     width: 8,
                   ),
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Color(0xff2c3545),
-                      borderRadius: BorderRadius.circular(13),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/checkout_icon.png',
-                          width: 28,
-                        )
-                      ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation1, animation2) =>
+                              CartPage(),
+                          transitionDuration: Duration(seconds: 0),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Color(0xff2c3545),
+                        borderRadius: BorderRadius.circular(13),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/checkout_icon.png',
+                            width: 28,
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -367,9 +395,20 @@ class HomePage extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
-                child: Image.asset(
-                  'assets/navbar_product.png',
-                  width: 16,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation1, animation2) =>
+                              ProductPage(),
+                          transitionDuration: Duration(seconds: 0),
+                        ));
+                  },
+                  child: Image.asset(
+                    'assets/navbar_product.png',
+                    width: 16,
+                  ),
                 ),
               ),
               label: 'Product',

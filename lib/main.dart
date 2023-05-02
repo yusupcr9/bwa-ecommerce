@@ -1,4 +1,6 @@
+import 'package:bwa_ecommerce/pages/cart_page.dart';
 import 'package:bwa_ecommerce/pages/home_page.dart';
+import 'package:bwa_ecommerce/pages/product_page.dart';
 import 'package:bwa_ecommerce/pages/started_page.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +16,7 @@ class EcommerceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: CartPage(),
     );
   }
 }
