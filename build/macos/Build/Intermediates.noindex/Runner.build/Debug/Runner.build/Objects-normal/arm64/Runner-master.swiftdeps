@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "63591c0be481a625afd52de8aedbc4ba772cfad55bed3cdce1c5051254446554"
+build_start_time: [1682650911, 324224948]
+build_end_time: [1682650918, 621441841]
+inputs:
+  "/Users/ptberdikari.dev/Documents/YUSUP/Flutter Project/bwa-ecommerce/macos/Flutter/GeneratedPluginRegistrant.swift": [1682650907, 725187778]
+  "/Users/ptberdikari.dev/Documents/YUSUP/Flutter Project/bwa-ecommerce/macos/Runner/AppDelegate.swift": [1668016546, 0]
+  "/Users/ptberdikari.dev/Documents/YUSUP/Flutter Project/bwa-ecommerce/macos/Runner/MainFlutterWindow.swift": [1668016546, 0]
